@@ -1,0 +1,8 @@
+name = "gint-simulator"
+description = "gint display simulator using PyScript"
+version = "0.1.0"
+
+[[fetch]]
+files = [
+    "./gint.py"
+]

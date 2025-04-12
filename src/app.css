@@ -1,0 +1,171 @@
+:root {
+  --titlebar-color: #1D2A27;
+
+  --primary-color: #00DC68;
+  --primary-hover: #2BFD87;
+  --primary-active: #00a24e;
+  --primary-focus: rgba(0, 172, 134, 0.6);
+  --primary-disabled-bg: #1E1E1E;
+  --primary-disabled-text: #3F3F46;
+  --button-text-color: #003719;
+  --button-shadow: rgba(0, 0, 0, 0.1);
+  --button-shadow-active: rgba(0, 0, 0, 0.15);
+
+  --secondary-bg: #3F3F46; /* Dark grey for secondary button */
+  --secondary-bg-hover: #5a5a63; /* Slightly lighter grey for hover */
+  --secondary-bg-active: #2c2c33; /* Darker grey for active state */
+  --secondary-focus: rgba(63, 63, 70, 0.5); /* Soft grey focus ring */
+  --secondary-disabled-bg: #B3B3B8; /* Light grey for disabled state */
+  --secondary-disabled-text: #E5E5E5; /* Disabled text color */
+  --secondary-text-color: #F4F4F5; /* Light grey text color */
+  --secondary-border: #3F3F46; /* Border color for secondary button */
+  --secondary-shadow: rgba(0, 0, 0, 0.1); /* Shadow color */
+  --secondary-shadow-active: rgba(0, 0, 0, 0.2); /* Shadow on active */
+
+  --title-color: #F4F4F5;
+  --text-color: #A1A1AA;
+  --font-main: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+}
+
+.btn-primary {
+  box-sizing: border-box;
+  background: var(--primary-color);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+  border-radius: 6px;
+  font-family: var(--font-main);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers text horizontally */
+  text-align: center;
+  color: var(--button-text-color);
+  padding: 12px 24px; /* Add some padding for a more spacious button */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions for hover/focus */
+  outline: none; /* Remove the default focus outline */
+}
+
+/* Hover effect for button */
+.btn-primary:hover {
+  background: var(--primary-hover); /* Use the hover color defined in :root */
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 2px 5px var(--button-shadow);
+}
+
+/* Focus effect for button */
+.btn-primary:focus {
+  box-shadow: none;
+  /* box-shadow: 0 0 0 3px var(--primary-focus); */
+}
+
+/* Active state (when the button is clicked) */
+.btn-primary:active {
+  background: var(--primary-active); /* Darker green when the button is clicked */
+  transform: translateY(1px); /* Button "presses down" slightly */
+  box-shadow: 0 1px 3px var(--button-shadow-active); /* Reduced shadow on click */
+}
+
+/* Disabled state for button */
+.btn-primary:disabled {
+  background: var(--primary-disabled-bg); /* Lighter green */
+  color: var(--primary-disabled-text); /* Disabled text color */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Lighter border */
+  cursor: not-allowed; /* Change cursor to indicate the button is disabled */
+}
+
+/* Add styles for icons inside the button (if any) */
+.btn-primary svg {
+  margin-left: .5rem; /* Space between icon and text */
+  /* width: 18px;
+  height: 18px; */
+}
+
+
+/* Button secondary */
+.btn-secondary {
+  box-sizing: border-box;
+  background: var(--secondary-bg);
+  border: 1px solid var(--secondary-border);
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers text horizontally */
+  text-align: center;
+  color: var(--secondary-text-color);
+  padding: 8px 16px; /* Add padding for a spacious button */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions for hover/focus */
+  outline: none; /* Remove the default focus outline */
+}
+
+/* Hover effect for secondary button */
+.btn-secondary:hover {
+  background: var(--secondary-bg-hover);
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 2px 5px var(--secondary-shadow); /* Subtle shadow */
+}
+
+/* Focus effect for secondary button */
+.btn-secondary:focus {
+  box-shadow: none;
+  /* box-shadow: 0 0 0 3px var(--secondary-focus);  */
+}
+
+/* Active state (when the button is clicked) */
+.btn-secondary:active {
+  background: var(--secondary-bg-active); /* Darker grey when pressed */
+  transform: translateY(1px); /* Button "presses down" slightly */
+  box-shadow: 0 1px 3px var(--secondary-shadow-active); /* Reduced shadow on click */
+}
+
+/* Disabled state for secondary button */
+.btn-secondary:disabled {
+  background: var(--secondary-disabled-bg); /* Lighter grey when disabled */
+  color: var(--secondary-disabled-text); /* Disabled text color */
+  border: 1px solid var(--secondary-disabled-bg); /* Lighter border */
+  cursor: not-allowed; /* Change cursor to indicate disabled state */
+}
+
+/* Add styles for icons inside the button (if any) */
+.btn-secondary svg {
+  margin-right: 8px; /* Space between icon and text */
+  width: 18px;
+  height: 18px;
+}
+
+/* Resets */
+
+* {
+  -webkit-user-drag: none;
+}
+
+.btn-secondary, .btn-primary {
+  border: none;
+}
+
+html, body {
+  color: var(--text-color);
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-main);
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--title-color);
+}
+
+a[href] {
+  color: rgba(0, 220, 104, 0.8);
+  text-decoration: underline;
+}

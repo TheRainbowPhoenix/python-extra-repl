@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+
+		
+		<!-- PyScript CSS -->
+		<!-- <link rel="stylesheet" href="./lib/core.css"> -->
+		<link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="./lib/ui.css" />
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PythonExtra Gint Simulator</title>
+
+		<!-- PyScript bootstrap -->
+		<script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+		<!-- <script type="module" src="./lib/core.js"></script> -->
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<py-config>
+name = "gint-simulator"
+description = "gint display simulator using PyScript"
+version = "0.1.0"
+
+[[fetch]]
+files = [
+	"./gint.py"
+]
+		</py-config>
+		<!-- <script type="py" src="./gint.py"></script> -->
+		
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+	</body>
+</html>
+
+
+
+
